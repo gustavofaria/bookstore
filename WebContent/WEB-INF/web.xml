@@ -8,7 +8,7 @@
 
 	<context-param>
 		<param-name>jdbcURL</param-name>
-		<param-value>jdbc:mysql://localhost:3306/Bookstore</param-value>
+		<param-value>jdbc:mysql://localhost:3306/Livraria</param-value>
 	</context-param>
 
 	<context-param>
@@ -22,13 +22,40 @@
 	</context-param>
 
 	<servlet>
-		<servlet-name>ControllerServlet</servlet-name>
-		<servlet-class>net.codejava.javaee.bookstore.ControllerServlet</servlet-class>
+		<servlet-name>LivroServlet</servlet-name>
+		<servlet-class>ufu.ppi.gustavo.livraria.servlet.LivroServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>ControllerServlet</servlet-name>
-		<url-pattern>/</url-pattern>
+		<servlet-name>LivroServlet</servlet-name>
+		<url-pattern>/livro/*</url-pattern>
+	</servlet-mapping>
+
+		<servlet>
+		<servlet-name>GeneroServlet</servlet-name>
+		<servlet-class>ufu.ppi.gustavo.livraria.servlet.GeneroServlet</servlet-class>
+	</servlet>
+		<servlet-mapping>
+		<servlet-name>GeneroServlet</servlet-name>
+		<url-pattern>/genero/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PessoaServlet</servlet-name>
+		<servlet-class>ufu.ppi.gustavo.livraria.servlet.PessoaServlet</servlet-class>
+	</servlet>
+		<servlet-mapping>
+		<servlet-name>PessoaServlet</servlet-name>
+		<url-pattern>/pessoa/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CompraServlet</servlet-name>
+		<servlet-class>ufu.ppi.gustavo.livraria.servlet.CompraServlet</servlet-class>
+	</servlet>
+		<servlet-mapping>
+		<servlet-name>CompraServlet</servlet-name>
+		<url-pattern>/compra/*</url-pattern>
 	</servlet-mapping>
 
 	<error-page>
